@@ -1,7 +1,10 @@
+// layout.tsx
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import SmoothScroll from "@/components/SmoothScroll"; // Import your SmoothScroll component
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,13 +29,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <head>
+        <style>
+          {/* You can add any global styles or CSS resets here */}
+        </style>
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="relative w-full flex items-center justify-center">
-          <Navbar/>
+          <Navbar />
         </div>
-        {children}
+        <SmoothScroll>{children}</SmoothScroll> {/* Wrap children with SmoothScroll */}
+        <Footer />
       </body>
     </html>
   );

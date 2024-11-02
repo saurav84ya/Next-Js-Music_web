@@ -18,13 +18,13 @@ export default function FeaturedCourses() {
   const featuredCourses = courseData.courses.filter((course: Course) => course.isFeatured);
 
   return (
-    <div className="bg-#1A1A19 overflow-hidden pb-20">
+    <div id="courses"  className="bg-#1A1A19 overflow-hidden pb-20">
       <div>
         <div className="text-center mt-20">
           <h2 className="text-base text-teal-600 font-semibold tracking-wide uppercase">
             FEATURED COURSES
           </h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+          <p  className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
             Learn With The Best
           </p>
         </div>

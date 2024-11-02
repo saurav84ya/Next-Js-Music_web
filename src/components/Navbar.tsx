@@ -23,15 +23,20 @@ function Navbar({ className }: { className?: string }) {
       )}
     >
       <Menu setActive={setActive}>
-        <MenuItem
+       <div onClick={() => scrollToSection('home')}>
+       <MenuItem
           setActive={setActive}
           active={active}
           item="Home"
+           // Add this line
         />
-        <MenuItem
+       </div>
+       <div onClick={() => scrollToSection('courses')} >
+       <MenuItem
           setActive={setActive}
           active={active}
           item="Course"
+          // Add this line
         >
           <div className="text-sm grid md:grid-cols-2 gap-10 p-4 flex-col">
             <ProductItem
@@ -60,11 +65,15 @@ function Navbar({ className }: { className?: string }) {
             />
           </div>
         </MenuItem>
-        <MenuItem
+       </div>
+       <div onClick={() => scrollToSection('contact')}>
+       <MenuItem
           setActive={setActive}
           active={active}
           item="Contact Me"
+           // Add this line
         />
+       </div>
       </Menu>
     </div>
   );

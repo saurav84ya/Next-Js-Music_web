@@ -5,6 +5,7 @@ import { title } from "process";
 import WhyChooseUsII from "@/components/WhyChooseUsII";
 import FourthPage from "@/components/FourthPage";
 import Ab from "@/components/Ab";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 
@@ -18,9 +19,10 @@ export default function Home() {
         <HeroSection/>
         <FeaturedCourses/>
         {/* <WhyChooseUs/> */}
-        <WhyChooseUsII/>
+        {/* <WhyChooseUsII/> */}
         <FourthPage/>
         <Ab/>
+        <Contact/>
         <Footer/>
       </div>
     </>
